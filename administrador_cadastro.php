@@ -20,6 +20,9 @@
 
                 <div>
                     <?php
+
+                        include "conexao.php";
+                        
                         $nome = $_REQUEST["nome"];
                         $login = $_REQUEST["login"];
                         $senha = md5( $_REQUEST["senha"] );
@@ -31,7 +34,6 @@
                         $sql = "insert into administrador(nome, login, senha)
                                 values (:nome, :login, :senha)";
 
-                        include "conexao.php";
                         $result = $conexao->prepare($sql);
                         $result->bindValue(":nome", $nome);
                         $result->bindValue(":login", $login);
