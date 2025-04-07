@@ -38,7 +38,7 @@
                     Utilize essa opção para cadastrar as categorias dos produtos que serão vendidos on-line.
                 </p>
                 <p>
-                    <a href="categorias.php" class="btn btn-danger">Clique</a>
+                    <a href="categoria.php" class="btn btn-danger">Clique</a>
                 </p>
             </div>
 
@@ -72,6 +72,16 @@
                 Utilize esta opção para visualizar as Vendas realizadas pelos clientes.
             <p>
         </div>
+
+        <div class="col-sm-4">
+                <h1 class="bg-danger">Formas de Pagamento</h1>
+                <p class="text-danger">
+                    Utilize essa opção para cadastrar as formas de pagamento dos produtos que serão vendidos on-line.
+                </p>
+                <p>
+                    <a href="formapagamento.php" class="btn btn-danger">Clique</a>
+                </p>
+            </div>
 
         </div>
     </div>

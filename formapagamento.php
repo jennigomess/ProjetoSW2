@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Cadastro de Fornecedores</h1>
+        <h1>Cadastro de Forma de Pagamento</h1>
     </div>
     
     <div class="container">
@@ -19,10 +19,10 @@
 
                 <h3 class="text-center p-3">Preencha os dados abaixo</h3>
 
-                <form action="fornecedor_cadastro.php">
+                <form action="formapagamento_cadastro.php">
 
                     <p>
-                        Digite o nome da categoria<br>
+                        Digite o nome da forma de pagamento<br>
                         <input type="text" name="nome" class="form-control">
                     </p>
 
