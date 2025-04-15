@@ -40,7 +40,9 @@
                     Utilize essa opção para cadastrar as categorias dos produtos que serão vendidos on-line.
                 </p>
                 <p>
-                    <a href="categoria.php" class="btn btn-danger">Clique</a>
+                    <a href="categoria.php" class="btn btn-danger">Cadastro</a>
+                    <a href="categoria_pesquisa.php" class="btn btn-danger">Pesquisa</a>
+
                 </p>
             </div>
 
@@ -50,7 +52,8 @@
                     Utilize essa opção para cadastrar os fornecedores dos produtos que serão vendidos on-line.
                 </p>
                 <p>
-                    <a href="fornecedor.php" class="btn btn-success">Clique</a>
+                <a href="fornecedor.php" class="btn btn-danger">Cadastro</a>
+                <a href="fornecedor_pesquisa.php" class="btn btn-danger">Pesquisa</a>
                 </p>
             </div>
 
@@ -64,7 +67,8 @@
                 Utilize esta opção para cadastrar os produtos que serão vendidos no site.
             <p>
             <p>
-                    <a href="produto.php" class="btn btn-warning">Clique</a>
+                <a href="produto.php" class="btn btn-danger">Cadastro</a>
+                <a href="produto_pesquisa.php" class="btn btn-danger">Pesquisa</a>
                 </p>
         </div>
 
@@ -81,7 +85,8 @@
                     Utilize essa opção para cadastrar as formas de pagamento dos produtos que serão vendidos on-line.
                 </p>
                 <p>
-                    <a href="formapagamento.php" class="btn btn-danger">Clique</a>
+                <a href="formapagamento.php" class="btn btn-danger">Cadastro</a>
+                <a href="formapagamento_pesquisa.php" class="btn btn-danger">Pesquisa</a>
                 </p>
             </div>
 
