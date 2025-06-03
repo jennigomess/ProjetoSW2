@@ -1,3 +1,14 @@
+<?php
+
+    session_start();
+
+    if ( !isset($_SESSION['nome']) )
+    {
+        header("location: login.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,24 +20,25 @@
 
 </head>
 <body>
-    <div class="bg-primary text-white p-3 text-center">
-    </div>
     
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 mx-auto mt-3 border border-primary">
+    <div class="bg-primary text-white p-3 text-center">
+        <h1>Cadastro de Formas de Pagamento</h1>
+    </div>
 
+    <div class="container">
+
+            <div class="row">
+                <div class="col-sm-8 mx-auto mt-3 border border-primary">
                 <h3 class="text-center p-3">Confirmação do Cadastro</h3>
 
                 <div>
-                    <?php
+                    <?php 
+                       include "conexao.php";
 
-                        include "conexao.php";
-                        
-                        $nome = $_REQUEST["nome"];
+                        $nome = $_REQUEST["nomeformadepagamento"];
 
-                            echo "Nome da Forma de Pagamento: $nome <br>";
-                                
+                        echo "Nome do da Forma de Pagamento: $nome <br>";
+
                         $sql = "insert into formapagamento(nome)
                                 values (:nome)";
 
@@ -34,17 +46,12 @@
                         $result->bindValue(":nome", $nome);
                         $result->execute();
 
-                        echo "<p>A Forma de Pagamento foi cadastrado com sucesso !</p>";
-
-  
+                        echo "<p>A forma de pagamento foi cadastrada com sucesso!</p>"
 
                     ?>
-                </div>
-
                
+                </div>
             </div>
-
-        </div>
     </div>
 </body>
 </html>

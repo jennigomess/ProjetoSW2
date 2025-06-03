@@ -1,3 +1,14 @@
+<?php
+
+    session_start();
+
+    if ( !isset($_SESSION['nome']) )
+    {
+        header("location: login.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +20,16 @@
 
 </head>
 <body>
+    
     <div class="bg-primary text-white p-3 text-center">
         <h1>Cadastro de Administradores</h1>
     </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 mx-auto mt-3 border border-primary">
 
-                <h3 class="text-center p-3">Preencha os dados abaixo</h3>
+    <div class="container">
+
+            <div class="row">
+                <div class="col-sm-8 mx-auto mt-3 border border-primary">
+                <h3>Preencha os dados abaixo:</h3>
 
                 <form action="administrador_cadastro.php">
 
@@ -39,13 +51,11 @@
                     <p>
                         <input type="submit" value="Cadastrar" class="btn btn-primary">
                         <input type="reset" value="Limpar" class="btn btn-success">
-                        <a href="index.php" class="btn btn-secondary">Voltar</a>
+                        <a href="#" class="btn btn-secondary">Voltar</a>
                     </p>
-
                 </form>
+                </div>
             </div>
-
-        </div>
     </div>
 </body>
 </html>

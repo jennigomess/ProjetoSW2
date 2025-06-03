@@ -1,3 +1,14 @@
+<?php
+
+    session_start();
+
+    if ( !isset($_SESSION['nome']) )
+    {
+        header("location: login.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,54 +20,50 @@
 
 </head>
 <body>
-    <div class="bg-primary text-white p-3 text-center">
-    </div>
     
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 mx-auto mt-3 border border-primary">
+    <div class="bg-primary text-white p-3 text-center">
+        <h1>Cadastro de Produtos</h1>
+    </div>
 
+    <div class="container">
+
+            <div class="row">
+                <div class="col-sm-8 mx-auto mt-3 border border-primary">
                 <h3 class="text-center p-3">Confirmação do Cadastro</h3>
 
                 <div>
-                    <?php
+                    <?php 
+                       include "conexao.php";
 
-                        include "conexao.php";
-                        
                         $descricao = $_REQUEST["descricao"];
                         $precocusto = $_REQUEST["precocusto"];
                         $precovenda = $_REQUEST["precovenda"];
-                        $codcategoria = $_REQUEST["codcategoria"];
-                        $codfornecedor = $_REQUEST["codfornecedor"];
+                        $categoria = $_REQUEST["categoria"];
+                        $fornecedor = $_REQUEST["fornecedor"];
 
-                            echo "Nome do Produto: $descricao <br>
-                                  Preço de Custo: R$ $precocusto <br>
-                                  Preço de Venda: R$ $precovenda <br>
-                                  Categoria: $codcategoria <br>
-                                  Fornecedor: $codfornecedor <br>";
+                        echo "Nome do Produto: $descricao <br>
+                                Preço de custo: $precocusto <br>
+                                Preço de venda: $precovenda <br>
+                                Categoria: $categoria <br>
+                                Fornecedor: $fornecedor <br>";
 
-                        $sql = "insert into produto(descricao, precocusto, precovenda, codcategoria, codfornecedor)
-                                values (:descricao, :precocusto, :precovenda, :codcategoria, :codfornecedor)";
+                        $sql = "insert into produto(descricao, precocusto, precovenda, categoria, fornecedor )
+                                values (:descricao, :precocusto, :precovenda, :categoria, :fornecedor)";
 
-                        $result = $conexao->prepare($sql);
+                        $result = $conexao->prepare("$sql");
                         $result->bindValue(":descricao", $descricao);
                         $result->bindValue(":precocusto", $precocusto);
                         $result->bindValue(":precovenda", $precovenda);
-                        $result->bindValue(":codcategoria", $codcategoria);
-                        $result->bindValue(":codfornecedor", $codfornecedor);
+                        $result->bindValue(":categoria", $categoria);
+                        $result->bindValue(":fornecedor", $fornecedor);
                         $result->execute();
 
-                        echo "<p>O produto foi cadastrado com sucesso !</p>";
-
-  
+                        echo "<p>O produto foi cadastrado com sucesso!</p>";
 
                     ?>
-                </div>
-
                
+                </div>
             </div>
-
-        </div>
     </div>
 </body>
 </html>

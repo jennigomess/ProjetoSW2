@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 08-Abr-2025 às 10:57
+-- Tempo de geração: 08-Abr-2025 às 13:28
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -36,15 +36,16 @@ CREATE TABLE IF NOT EXISTS `administrador` (
   `login` varchar(200) NOT NULL,
   `senha` varchar(200) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `administrador`
 --
 
 INSERT INTO `administrador` (`codigo`, `nome`, `login`, `senha`) VALUES
-(1, 'jenni', 'etec', '5fddd10608c2599b2c676144361d297f'),
-(2, 'Jennifer', 'jennigomes', '9fc6548333d03cb5e1c6454216bf2df6');
+(1, 'joao', 'etec', ''),
+(2, 'joao', 'etec', '5fddd10608c2599b2c676144361d297f'),
+(3, 'joao', 'etec', '5fddd10608c2599b2c676144361d297f');
 
 -- --------------------------------------------------------
 
@@ -57,15 +58,18 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `codigo` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `categoria`
 --
 
 INSERT INTO `categoria` (`codigo`, `nome`) VALUES
-(1, 'Motos'),
-(2, 'Motos');
+(1, 'we'),
+(2, 'we'),
+(3, 'we'),
+(4, 'we'),
+(5, 'we');
 
 -- --------------------------------------------------------
 
@@ -76,16 +80,9 @@ INSERT INTO `categoria` (`codigo`, `nome`) VALUES
 DROP TABLE IF EXISTS `formapagamento`;
 CREATE TABLE IF NOT EXISTS `formapagamento` (
   `codigo` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(200) NOT NULL,
+  `nome` varchar(100) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Extraindo dados da tabela `formapagamento`
---
-
-INSERT INTO `formapagamento` (`codigo`, `nome`) VALUES
-(1, 'Cartão de Crédito');
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -105,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `fornecedor` (
 --
 
 INSERT INTO `fornecedor` (`codigo`, `nome`) VALUES
-(1, 'Motoka Motos');
+(1, 'dqdw');
 
 -- --------------------------------------------------------
 
