@@ -53,9 +53,10 @@
                         $result->execute();
 
                         echo "<p>O administrador foi cadastrado com sucesso!</p>"
-
+                        
                     ?>
-               
+                         <a href="index.php" class="btn btn-secondary">Voltar</a>
+
                 </div>
             </div>
     </div>
