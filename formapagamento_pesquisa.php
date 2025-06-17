@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Pesquisa de Administradoes</h1>
+        <h1>Pesquisa de Forma de Pagamento</h1>
     </div>
 
     <div class="container">
@@ -36,7 +36,7 @@
                     <?php
                         include "conexao.php";
 
-                        $sql = "select * from pagamento";
+                        $sql = "select * from formapagamento";
 
                         $result = $conexao->prepare($sql);
                         $result->execute();

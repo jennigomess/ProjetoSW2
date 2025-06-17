@@ -61,7 +61,7 @@
                     <p>
                         <input type="submit" value="Cadastrar" class="btn btn-warning">
                         <input type="reset" value="Limpar" class="btn btn-success">
-                        <a href="#" class="btn btn-secondary">Voltar</a>
+                        <a href="index.php" class="btn btn-secondary">Voltar</a>
                     </p>
                 </form>
                 </div>

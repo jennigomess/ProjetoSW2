@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="bg-primary text-white p-3 text-center">
-        <h1>Pesquisa de Administradoes</h1>
+        <h1>Pesquisa de Fornecedores</h1>
     </div>
 
     <div class="container">
